@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
+
 
 namespace GameLibraryProject
 {
@@ -23,6 +26,13 @@ namespace GameLibraryProject
         public MainWindow()
         {
             InitializeComponent();
+            connectionButton.Click += ConnectionButton_Click;
+        }
+
+        private void ConnectionButton_Click(object sender, RoutedEventArgs e)
+        {
+            string connectionString;
+            
         }
     }
 }
