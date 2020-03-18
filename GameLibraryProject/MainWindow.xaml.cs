@@ -32,7 +32,15 @@ namespace GameLibraryProject
         private void ConnectionButton_Click(object sender, RoutedEventArgs e)
         {
             string connectionString;
-            
+            SqlConnection cnn;
+            connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["CNN"].ConnectionString;
+            cnn = new SqlConnection(connectionString);
+            cnn.Open();
+            if (cnn.State.ToString() == "open")
+            {
+
+            }
+
         }
     }
 }
